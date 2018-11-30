@@ -1,0 +1,1 @@
+chrome.tabs.create({ url: '/bg.html' }, function(tab){});
