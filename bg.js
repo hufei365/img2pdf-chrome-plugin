@@ -28,10 +28,7 @@ window.onafterprint = ()=>{
     document.body.className=""
 }
 
-
-
-file.addEventListener('input', (event)=>{
-    
+file.addEventListener('input', ()=>{
     document.title = file.files[0].name.replace(/\.[pngje]+$/g, '');
     count = file.files.length; 
     Array.prototype.map.call(file.files, (f)=>{
