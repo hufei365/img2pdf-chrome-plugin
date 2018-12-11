@@ -19,14 +19,6 @@ function append(file){
     }
     reader.readAsDataURL(file);
 }
-window.onbeforeprint = ()=>{
-    fix.hidden=true;
-    document.body.className="print"
-}
-window.onafterprint = ()=>{
-    fix.hidden=false;
-    document.body.className=""
-}
 
 file.addEventListener('input', ()=>{
     document.title = file.files[0].name.replace(/\.[pngje]+$/g, '');

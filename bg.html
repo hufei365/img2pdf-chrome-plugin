@@ -5,34 +5,42 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>conver image to pdf</title>
     <style>
-        html,body{
+        html,
+        body {
             width: 100%;
         }
-        img{
+
+        img {
             max-width: 100%;
             border: 1px dashed gray;
         }
 
-        .fix{
+        .fix {
             position: fixed;
             top: 0;
             left: 0;
             border-bottom-right-radius: 5px;
             padding: 20px;
-            background-color: rgba(0,0,0, 0.7);
-            color:aliceblue;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: aliceblue;
         }
 
-        .print img{
-            border: none;
-            margin: 10px auto;
-            display: block;
+        @media print {
+            img {
+                border: none;
+                margin: 10px auto;
+                display: block;
+            }
+
+            .fix {
+                display: none;
+            }
         }
     </style>
 </head>
 
-<body >
-        <OBJECT ID='WebBrowser' NAME="WebBrowser" WIDTH=0 HEIGHT=0 CLASSID='CLSID:8856F961-340A-11D0-A96B-00C04FD705A2'></OBJECT>
+<body>
+    
     <div class="fix">
         <h2>Convert image to PDF</h2>
         <p>Please select a picture...</p>
